@@ -2,8 +2,30 @@ import React from "react";
 import "./Home.css";
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
+    <div className="home">
+      <div className="hero">
+        <h1>
+          Largest <br />
+          Crypto Marketplace
+        </h1>
+        <p>
+          Welcome to Divyansh's Crypto Market — Where your digital fortune
+          begins!
+        </p>
+        <form>
+          <input type="text" placeholder="Search crypto..." />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      <div className="crypto-tabel">
+        <div className="table-layout">
+          <p>#</p>
+          <p>Coins</p>
+          <p>Price</p>
+          <p style={{ textAlign: "centre" }}>24H Change</p>
+          <p className="market-cap">Market Cap</p>
+        </div>
+      </div>
     </div>
   );
 };
