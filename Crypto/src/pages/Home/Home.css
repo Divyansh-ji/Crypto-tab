@@ -232,3 +232,15 @@
 .market-cap {
   text-align: center;
 }
+.crypto-tabel {
+  max-height: 400px; /* Or any height you prefer */
+  overflow-y: auto;
+}
+
+.tabel-layout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
