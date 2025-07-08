@@ -39,10 +39,10 @@ const Home = () => {
                 <img src={item.image} alt="" />
                 <p>{item.name + "-" + item.symbol}</p>
               </div>
-              <p className="market-cap">
+              <p className="pricer">
                 {currency.symbol} {item.current_price}
               </p>
-              <p className="market-cap">
+              <p className="timer">
                 {Math.floor(item.price_change_percentage_24h * 100) / 100}
               </p>
               <p className="market-cap">{item.market_cap}</p>
