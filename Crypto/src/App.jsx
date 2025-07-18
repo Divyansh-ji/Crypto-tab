@@ -1,8 +1,8 @@
 import React from "react";
-import NavBar from "./components/Navbar/NavBar";
 import { Routes, Route } from "react-router-dom";
-import Coin from "./pages/Coin/Coin";
+import NavBar from "./components/Navbar/NavBar";
 import Home from "./pages/Home/Home";
+import Coin from "./pages/Coin/Coin";
 
 const App = () => {
   return (
