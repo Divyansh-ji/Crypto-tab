@@ -12,6 +12,12 @@
   width: max(12vw, 120px);
 }
 
+.logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
 .navbar ul {
   display: flex;
   gap: 40px;
@@ -25,6 +31,27 @@
   cursor: pointer;
   color: #ddd;
   transition: color 0.3s ease;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.navbar li a:hover {
+  color: #64ffda;
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateY(-2px);
+}
+
+.navbar li a.active {
+  color: #64ffda;
+  background: rgba(100, 255, 218, 0.2);
+  border: 1px solid rgba(100, 255, 218, 0.3);
 }
 
 .navbar li:hover {
@@ -59,7 +86,6 @@
   background: white;
   border: none;
   cursor: pointer;
-;
 }
 
 .navbar button:hover {
@@ -74,4 +100,24 @@
 
 .navbar button img {
   width: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 5%;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .navbar ul {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .navbar li a {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
 }

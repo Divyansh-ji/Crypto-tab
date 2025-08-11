@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./NavBar.css";
 import Logo from "../../assets/logo.png";
 import arrow_icon from "../../assets/arrow_icon.png";
@@ -6,6 +7,7 @@ import { CoinContext } from "../../context/CoinContext";
 
 const NavBar = () => {
   const { setCurrency } = useContext(CoinContext);
+  const location = useLocation();
 
   const currencyHandler = (event) => {
     switch (event.target.value) {
@@ -25,9 +27,20 @@ const NavBar = () => {
 
   return (
     <div className="navbar">
-      <img src={Logo} alt="Logo" className="logo" />
+      <Link to="/" className="logo-link">
+        <img src={Logo} alt="Logo" className="logo" />
+      </Link>
       <ul>
-        <li>Home</li>
+        <li>
+          <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/news" className={location.pathname === "/news" ? "active" : ""}>
+            📰 News
+          </Link>
+        </li>
         <li>Feature</li>
         <li>Pricing</li>
         <li>Blog</li>

@@ -1,0 +1,4 @@
+# This is a placeholder for the fallback news image
+# In a real implementation, you would place an actual .jpg image file here
+# The image should be a generic crypto/news related image that can be used
+# when news articles don't have their own images 
